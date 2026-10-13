@@ -1,0 +1,36 @@
+{
+  "spiderman": {
+    "arrival": {"file": "spiderman/arrival.png", "url": "https://pngimg.com/uploads/spider_man/spider_man_PNG55.png", "page": "https://pngimg.com/image/28937"},
+    "landing": {"file": "spiderman/landing.png", "url": "https://pngimg.com/uploads/spider_man/spider_man_PNG50.png", "page": "https://pngimg.com/image/28932"},
+    "idle": {"file": "spiderman/idle.png", "url": "https://pngimg.com/uploads/spider_man/spider_man_PNG26.png", "page": "https://pngimg.com/image/28908"}
+  },
+  "ironman": {
+    "arrival": {"file": "ironman/arrival.png", "url": "https://pngimg.com/uploads/ironman/ironman_PNG91.png", "page": "https://pngimg.com/image/29684"},
+    "landing": {"file": "ironman/landing.png", "url": "https://pngimg.com/uploads/ironman/ironman_PNG80.png", "page": "https://pngimg.com/image/29673"},
+    "idle": {"file": "ironman/idle.png", "url": "https://pngimg.com/uploads/ironman/ironman_PNG89.png", "page": "https://pngimg.com/image/29682"}
+  },
+  "captain_america": {
+    "arrival": {"file": "captain_america/arrival.png", "url": "https://pngimg.com/uploads/captain_america/captain_america_PNG91.png", "page": "https://pngimg.com/image/30040"},
+    "idle": {"file": "captain_america/idle.png", "url": "https://pngimg.com/uploads/captain_america/captain_america_PNG7.png", "page": "https://pngimg.com/image/29956"}
+  },
+  "batman": {
+    "arrival": {"file": "batman/arrival.png", "url": "https://pngimg.com/uploads/batman/batman_PNG115.png", "page": "https://pngimg.com/image/29095"},
+    "landing": {"file": "batman/landing.png", "url": "https://pngimg.com/uploads/batman/batman_PNG106.png", "page": "https://pngimg.com/image/29086"},
+    "idle": {"file": "batman/idle.png", "url": "https://pngimg.com/uploads/batman/batman_PNG110.png", "page": "https://pngimg.com/image/29090"}
+  },
+  "superman": {
+    "arrival": {"file": "superman/arrival.png", "url": "https://pngimg.com/uploads/superman/superman_PNG66.png", "page": "https://pngimg.com/image/29161"},
+    "idle": {"file": "superman/idle.png", "url": "https://pngimg.com/uploads/superman/superman_PNG64.png", "page": "https://pngimg.com/image/29159"}
+  },
+  "wonder_woman": {
+    "landing": {"file": "wonder_woman/landing.png", "url": "https://pngimg.com/uploads/wonder_woman/wonder_woman_PNG53.png", "page": "https://pngimg.com/image/53449"},
+    "idle": {"file": "wonder_woman/idle.png", "url": "https://pngimg.com/uploads/wonder_woman/wonder_woman_PNG51.png", "page": "https://pngimg.com/image/53447"}
+  },
+  "flash": {
+    "idle": {"file": "flash/idle.png", "url": "https://freepngimg.com/download/the_flash/9-2-flash-free-download-png.png", "page": "https://freepngimg.com/png/19288-flash-free-download-png"}
+  },
+  "thor": {
+    "arrival": {"file": "thor/arrival.png", "url": "https://freepngimg.com/download/thor/2-2-thor-free-download-png.png", "page": "https://freepngimg.com/png/17884-thor-free-download-png"},
+    "idle": {"file": "thor/idle.png", "url": "https://freepngimg.com/download/thor/6-2-thor-png-image.png", "page": "https://freepngimg.com/png/17888-thor-png-image"}
+  }
+}

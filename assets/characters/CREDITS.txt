@@ -1,0 +1,40 @@
+SipSidekick character artwork
+
+Downloaded PNG cutouts are supplied by PNGimg.com and FreePNGimg.com.
+The precise image page and original download URL for every bundled file are
+recorded in manifest.json. No original downloaded image bytes were modified.
+The app crops transparent margins, resizes, cleans alpha edges for Windows
+color-key transparency, changes poses, and animates the images at runtime.
+
+The source sites identify these downloads as CC BY-NC 4.0:
+https://creativecommons.org/licenses/by-nc/4.0/
+https://pngimg.com/license
+https://freepngimg.com/
+
+This is a noncommercial asset pack. The source-site license does not establish
+ownership of Marvel/DC characters, trademarks, or film imagery, or grant
+commercial character rights. This application is not endorsed by Marvel or DC.
+Artwork is provided without warranties under the linked source terms.
+
+Source attribution:
+Spider-Man, Iron Man, Captain America, Batman, Superman, Wonder Woman: PNGimg.com.
+Thor and The Flash: FreePNGimg.com. Refer to each manifest entry for its image page.
+
+Asset format and animation
+
+This pack contains static transparent PNG poses, not movie clips or authored
+frame-by-frame character animations. Desktop movement, landings, effects, and
+message reveals are implemented in choreography.py and reminder_styles.py.
+Spider-Man, Iron Man, and Batman have distinct arrival, landing, and idle poses.
+Other heroes reuse idle or arrival poses when a separate stage is not supplied.
+
+To replace a pose, place a PNG, transparent WebP, APNG, or GIF inside this
+directory and update that pose's "file" value in manifest.json. Restart the app.
+Supported pose names are arrival, landing, and idle; missing stages use idle.
+Animated image frames play using their embedded frame durations. The decoder
+loads at most 120 frames and rejects images above 24 megapixels. Missing or
+corrupt files fall back to the built-in canvas character and log a warning.
+
+To restore missing bundled files:
+    .\venv\Scripts\python.exe tools\download_character_assets.py
+The downloader preserves existing files and does not run during normal use.

@@ -1,0 +1,54 @@
+SipSidekick desktop builds
+=========================
+
+WINDOWS
+Extract the complete SipSidekick-windows-x86_64.zip into a folder you can keep.
+Open SipSidekick/SipSidekick.exe. Python is not required on the destination PC.
+Keep the _internal folder beside the executable; do not copy the exe alone.
+You can create a desktop shortcut to the exe. Keep the app running for reminders.
+Settings are stored at %LOCALAPPDATA%\SipSidekick\settings.json, not in the bundle.
+This is an unsigned portable app, not an installer. It may prompt for trust.
+
+MACOS
+The Mac app must be built on macOS. A Windows exe does not run on macOS.
+On a Mac, install Python 3.14 from python.org, including its Tk support, then run:
+    python3 -m venv .venv
+    .venv/bin/python -m pip install -r requirements-build.txt
+    .venv/bin/python -m unittest -v
+    .venv/bin/python build_desktop.py
+Find SipSidekick.app and its zip in dist/macos-<architecture>/.
+Copy SipSidekick.app to Applications, then open it. No Python install is needed
+on the destination Mac. Build on Apple Silicon for arm64, or Intel for x86_64.
+Settings are stored at ~/Library/Application Support/SipSidekick/settings.json.
+macOS transparency uses Tk's native transparent window support; visual behavior
+must be checked on a real Mac. No Mac runtime was available for the Windows build.
+These builds are not Developer ID signed or notarized. Public distribution needs
+Apple signing/notarization and a macOS QA pass. No credentials are bundled.
+
+BUILD BOTH PLATFORMS WITH GITHUB ACTIONS
+Commit the source to your GitHub repository, open Actions, select Build desktop
+apps, and choose Run workflow. Download the successful platform artifacts.
+The workflow builds Windows x64, Apple Silicon Mac, and Intel Mac separately.
+Nothing is uploaded or published automatically by the local build command.
+The workflow itself has not been run from this workspace.
+
+LOCAL WINDOWS REBUILD
+    .\venv\Scripts\python.exe -m pip install -r requirements-build.txt
+    .\venv\Scripts\python.exe -m unittest -v
+    .\venv\Scripts\python.exe build_desktop.py
+The builder refuses to overwrite an existing release. Use --output with a new
+directory for subsequent builds, for example --output dist/windows-v2.
+
+PACKAGING NOTES
+Character artwork, Tk, Pillow, and the Python runtime are bundled for offline use.
+Personal settings are NOT bundled. The source build keeps the existing local
+water_reminder_settings.json; packaged builds start with their own defaults.
+This packages the current PNG-based animations, not new stylized 3D assets.
+See ARTWORK-CREDITS.txt and assets/characters/CREDITS.txt for artwork source terms.
+The downloaded artwork is supplied under the source sites' stated noncommercial
+terms; packaging does not grant rights to the underlying superhero characters.
+
+References:
+https://pyinstaller.org/en/stable/usage.html
+https://pyinstaller.org/en/stable/feature-notes.html
+https://www.tcl-lang.org/man/tcl9.0/TkCmd/wm.html
